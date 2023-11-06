@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>hello world</title>
+    <script>
+        window.android.call('from index')
+        window.send2inner = () => document.getElementById('inner').contentWindow.postMessage('invoke')
+    </script>
+</head>
+<body>
+<h1>Hello World</h1>
+<button onclick="send2inner()">Let iframe invoke android object function</button>
+<iframe id="inner" src="/assets/inner.html" title="inner"></iframe>
+</body>
+</html>
